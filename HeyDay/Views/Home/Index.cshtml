@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Twitter search";
+}
+
+<div class="row d-flex justify-content-center">
+    <div class="col-md-12">
+        <div class="card p-3  py-4">
+            <div class="row g-3 mt-2">
+                <div class="col-md-9">
+                    <input type="text" class="form-control bg-white text-black-50" placeholder="Search on Twitter" id="input_search">
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-success btn-block" onclick="search()" id="btn_search">Search Results</button>
+                </div>
+            </div>
+            <div class="row g-3 mt-2 px-4">
+                <div class="col-md-9 custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="only_photos">
+                    <label class="custom-control-label" for="only_photos">Only photos</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron bg-light" style="display:none">
+
+    <div class="result">
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
